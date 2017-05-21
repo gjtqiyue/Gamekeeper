@@ -14,8 +14,7 @@ public class Mover : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
-		rb.AddForce (transform.forward * speed);
+		rb.AddForce (transform.up * speed);
 	}
 
 	IEnumerator timeCollapse () {
