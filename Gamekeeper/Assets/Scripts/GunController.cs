@@ -23,7 +23,7 @@ public class GunController : MonoBehaviour {
 		float rotX = Input.GetAxis ("Mouse X") * sensitivity * Time.deltaTime;
 		float rotY = Input.GetAxis ("Mouse Y") * sensitivity * Time.deltaTime;
 
-		transform.Rotate (0, rotX, -rotY);
+		transform.Rotate (rotY, rotX, 0);
 
 		Fire ();
 	}
