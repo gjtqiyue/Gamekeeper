@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: ac926e092ceab4547a8e3521a76ecd46
+timeCreated: 1506284050
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Angeline Vintage
+  fontNames:
+  - Angeline Vintage
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 3a15d833de60048b08e2b9cd2730208d, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

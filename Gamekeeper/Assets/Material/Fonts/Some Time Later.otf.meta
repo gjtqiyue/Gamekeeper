@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 7192c08043841429d8a7e810700a494d
+timeCreated: 1506284589
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Some Time Later
+  fontNames:
+  - Some Time Later
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

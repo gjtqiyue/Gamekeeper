@@ -42,3 +42,13 @@
 /Users/lancer/Documents/Unity/Gamekeeper/Gamekeeper/Temp/bin/Debug/Mono.Cecil.Mdb.dll
 /Users/lancer/Documents/Unity/Gamekeeper/Gamekeeper/Temp/bin/Debug/Assembly-CSharp.dll.mdb
 /Users/lancer/Documents/Unity/Gamekeeper/Gamekeeper/Temp/bin/Debug/Assembly-CSharp.dll
+/Users/lancer/Documents/Unity/Gamekeeper/Gamekeeper/Temp/bin/Debug/UnityEngine.Timeline.dll
+/Users/lancer/Documents/Unity/Gamekeeper/Gamekeeper/Temp/bin/Debug/ExCSS.Unity.dll
+/Users/lancer/Documents/Unity/Gamekeeper/Gamekeeper/Temp/bin/Debug/Unity.Legacy.NRefactory.dll
+/Users/lancer/Documents/Unity/Gamekeeper/Gamekeeper/Temp/bin/Debug/UnityEngine.UIAutomation.dll
+/Users/lancer/Documents/Unity/Gamekeeper/Gamekeeper/Temp/bin/Debug/UnityEngine.GoogleAudioSpatializer.dll
+/Users/lancer/Documents/Unity/Gamekeeper/Gamekeeper/Temp/bin/Debug/UnityEngine.SpatialTracking.dll
+/Users/lancer/Documents/Unity/Gamekeeper/Gamekeeper/Temp/bin/Debug/UnityEngine.Purchasing.dll
+/Users/lancer/Documents/Unity/Gamekeeper/Gamekeeper/Temp/bin/Debug/Unity.Cecil.dll
+/Users/lancer/Documents/Unity/Gamekeeper/Gamekeeper/Temp/bin/Debug/Unity.Cecil.Pdb.dll
+/Users/lancer/Documents/Unity/Gamekeeper/Gamekeeper/Temp/bin/Debug/Unity.Cecil.Mdb.dll

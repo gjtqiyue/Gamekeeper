@@ -10,7 +10,10 @@ public class MenuScript : MonoBehaviour {
 	public Button start;
 	public Button exit;
 	public Button startGame;
+	public Button entry;
 	public Animator Anim;
+	public AudioClip aud;
+
 
 	public Image title;
 	public Image startText;
@@ -21,23 +24,25 @@ public class MenuScript : MonoBehaviour {
 		menu.GetComponent <Canvas> ();
 		start.GetComponent <Button> ();
 		exit.GetComponent <Button> ();
+		entry.GetComponent <Button> ();
 		Anim.GetComponent <Animator> ();
+
 	}
 
-	public void pressStart () {
+	/*public void pressStart () {
 		Anim.Play ("TitleMove");
-	}
-	/*
-	public void scrollUp () {
-		Anim.Play ("MoveUp");
+	}*/
+
+	public void pressEntry () {
+		Anim.Play ("Show");
 	}
 
-	public void startButton () {
+	/*public void startButton () {
 		Anim.Play ("MoveLeft");
 	}*/
 
-	public void pressStartGame () {
-		SceneManager.LoadScene (1);
+	public void pressStart () {
+		SceneManager.LoadScene ("LevelInfo");
 	}
 
 	public void pressExit () {

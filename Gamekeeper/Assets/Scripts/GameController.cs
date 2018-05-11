@@ -12,14 +12,20 @@ public class GameController : MonoSingleton<GameController> {
 	public float spawnWait;
 	public float waveWait;
 	public int monsterCount;
+	public float allowedTime;
+	public int numOfCollect; 
+	public int goalOfCollect = 10;
+
+	[HideInInspector]
 	public float timeLeft;
-	public int numOfCollect;
 
 	public Text timer;
 	public Text goalText;
 	public Image warningImage;
 	public Image restartImage;
 	public Image nextLevelImage;
+	public Button nextLevel;
+	public Button restart;
 
 	public bool imageIsOn = false;
 	public bool canFire = false;
@@ -36,6 +42,7 @@ public class GameController : MonoSingleton<GameController> {
 		restartImage.enabled = false;
 		nextLevelImage.enabled = false;
 		canFire = true;
+		timeLeft = allowedTime;
 	}
 	
 	// Update is called once per frame
@@ -52,16 +59,14 @@ public class GameController : MonoSingleton<GameController> {
 			canFire = false;
 			restartImage.enabled = true;
 
-			if (Input.GetKey (KeyCode.R)) {
-				SceneManager.LoadScene ("MainScene");
-			}
 		}
 
 		// level up condition
-		if (numOfCollect == 10) {
+		if (numOfCollect == goalOfCollect  ) {
+			timeLeft = allowedTime;
 			Debug.Log ("Next Level");
 			monsterCount = 0;
-			timer.text = "{0:00.00}";
+			timer.text = string.Format("{0:00.00}", timeLeft);
 			canFire = false;
 			nextLevelImage.enabled = true;
 		}
@@ -87,6 +92,14 @@ public class GameController : MonoSingleton<GameController> {
 			yield return new WaitForSeconds (waveWait);
 
 		}
+	}
+
+	public void restartButton () {
+		SceneManager.LoadScene ("MainScene");
+	}
+
+	public void nextLevelButton () {
+		SceneManager.LoadScene ("NextLevel");
 	}
 		
 }

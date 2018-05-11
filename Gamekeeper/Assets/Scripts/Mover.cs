@@ -5,7 +5,7 @@ using UnityEngine;
 public class Mover : MonoBehaviour {
 	public Rigidbody rb;
 	public float speed;
-	public float delay;
+
 
 	// Use this for initialization
 	void Start () {
@@ -15,30 +15,36 @@ public class Mover : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		rb.AddForce (transform.up * speed);
-	}
 
-	IEnumerator timeCollapse () {
-		GameController.Instance.timeLeft -= 5;
-		Debug.Log ("Enable");
-		GameController.Instance.warningImage.enabled = true;
-		yield return new WaitForSeconds (delay);
-		Debug.Log ("Disable");
-		GameController.Instance.warningImage.enabled = false;
+
+
 	}
+		
 
 	void OnTriggerEnter (Collider other)
 	{
 		if (other.tag == "Monster") {
+			GameControllerNextLevel.Instance.timeLeft -= 5;
+			Debug.Log ("Enable");
+			GameControllerNextLevel.Instance.warningImage.enabled = true;
+
+			other.GetComponent <MeshRenderer> ().enabled = false;
 			Destroy (other.gameObject);
 			Destroy (this.gameObject);
-			Debug.Log ("Wrong one");
-			StartCoroutine (timeCollapse ());
+			//Debug.Log ("Wrong one");
+
 		}
 		if (other.tag == "Boss") {
 			Debug.Log ("That's the one");
 			Destroy (other.gameObject);
 			Destroy (this.gameObject);
-			GameController.Instance.numOfCollect += 1;
+			GameControllerNextLevel.Instance.numBossKilled +=1;
+		}
+		if (other.tag == "Collection") {
+			GameControllerNextLevel.Instance.timeLeft = GameControllerNextLevel.Instance.allowedTime - 10;
+			Destroy (other.gameObject);
+			Destroy (this.gameObject);
+			GameControllerNextLevel.Instance.numOfCollect += 1;
 		}
 	}
 }

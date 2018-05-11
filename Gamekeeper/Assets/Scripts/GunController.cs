@@ -7,15 +7,19 @@ public class GunController : MonoBehaviour {
 	
 	public float sensitivity;
 	public float fireRate;
+	public Rigidbody rb;
 
 	public GameObject bullet;
 	public Transform shotSpawn;
+	public float min;
+	public float max;
 
 	private float nextFire;
 
+
 	// Use this for initialization
 	void Start () {
-		
+		rb = GetComponent <Rigidbody> ();
 	}
 	
 	// Update is called once per frame
@@ -23,14 +27,15 @@ public class GunController : MonoBehaviour {
 		float rotX = Input.GetAxis ("Mouse X") * sensitivity * Time.deltaTime;
 		float rotY = Input.GetAxis ("Mouse Y") * sensitivity * Time.deltaTime;
 
-		transform.Rotate (rotY, rotX, 0);
+		rb.transform.Rotate (rotY, 0, 0);
+		rb.transform.Rotate (0, rotX, 0, 0);
 
 		Fire ();
 	}
 
 	public void Fire ()
 	{
-		if (Input.GetKey (KeyCode.F) && Time.time > nextFire && GameController.Instance.canFire) {
+		if (Input.GetKey (KeyCode.Space) && Time.time > nextFire && GameControllerNextLevel.Instance.canFire) {
 			nextFire = Time.time + fireRate;
 			GameObject bulletTemp = Instantiate (bullet, shotSpawn.position, shotSpawn.rotation); //as GameObject;
 
